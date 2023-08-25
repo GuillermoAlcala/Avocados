@@ -14,8 +14,10 @@ struct ContentView: View {
      headers es la variable que iterará cada elemento en el foreach
      */
     
+    
     var facts:[Fact]=factData
     var recipes:[Recipe]=recipeData
+   // var ripes:[Ripening]=ripeningData
     var body: some View {
         ScrollView(.vertical, showsIndicators:false){
             VStack(alignment:.center, spacing: 20){

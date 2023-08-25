@@ -23,7 +23,7 @@ struct AppView: View {
                     .foregroundColor(.white)
             })
             
-            RipenningStagesView().tabItem({
+            RipenningView(rip: ripeningData[0],star: 0).tabItem({
                 Image("tabicon-avocado")
                 Text("Ripening")
                     .foregroundColor(.white)
