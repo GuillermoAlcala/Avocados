@@ -11,6 +11,9 @@ struct RipeningRatingView: View {
     var rip: Ripening
     var star: Int = 0
     var body: some View {
+        Image(systemName: "star.fill")
+
+    /*
         if rip.stage>0 {
             ForEach(1...(rip.stage),id:\.self){ item in
                 Image(systemName: "star.fill")
@@ -22,7 +25,7 @@ struct RipeningRatingView: View {
             Image(systemName: "star")
             
         }
-        
+        */
     }
 }
 

@@ -30,8 +30,10 @@ struct RecipeDetailView: View {
                     
                     // MARK: - RATING
                     RecipeRatingView(recipe: recipe)
+                    
                     //COOKING
                     CookingView(recipe: recipe)
+                    
                     //INGREDIENTS
                     Text("Ingredients")
                         .modifier(TitleModifier())
