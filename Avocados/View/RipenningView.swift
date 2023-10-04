@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct RipenningView: View {
-    var rip: Ripening
+    var rip: [Ripening]=ripeningData
     var tap:Bool=false
     var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
     //@ObservedObject var ripp = RipeningStore()
@@ -17,7 +17,7 @@ struct RipenningView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack(spacing: 20) {
-                ForEach(ripeningData) { item in
+                ForEach(ripeningData.self,id: \.id) { item in
                     VStack {
                         Image(item.image)
                             .resizable()
@@ -45,9 +45,8 @@ struct RipenningView: View {
                 
             }
             .padding()
-            
             .sheet(isPresented: $showModel) {
-                RipenningStagesView(ripeningStages: ripeningData[0].self)
+                RipenningStagesView(ripeningStagess:ripeningData[0])
                     .presentationDetents([.height(360), .medium, .large])
                     .presentationDragIndicator(.automatic)
             }
@@ -60,7 +59,7 @@ struct RipenningView: View {
 
 struct RipenningView_Previews: PreviewProvider {
     static var previews: some View {
-        RipenningView(rip: ripeningData[0])
+        RipenningView(rip: ripeningData)
     }
 }
 

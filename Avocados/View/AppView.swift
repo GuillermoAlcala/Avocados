@@ -24,7 +24,8 @@ struct AppView: View {
             })
             
             //RipenningView(rip: ripeningData[0])
-            Ripening_OriginalView().tabItem({
+            //Ripening_OriginalView(ripening: ripeningData[1])
+            RipeningStageOriginal_View().tabItem({
                 Image("tabicon-avocado")
                 Text("Ripening")
                     .foregroundColor(.white)

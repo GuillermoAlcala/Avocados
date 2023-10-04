@@ -8,20 +8,19 @@
 import SwiftUI
 
 struct RipenningStagesView: View {
-    var ripeningStages: Ripening
-    
+    var ripeningStagess: Ripening
     var body: some View {
         VStack {
-            Image(ripeningStages.image)
+            Image(ripeningStagess.image)
                 .resizable()
                 .scaledToFit()
                 .aspectRatio(contentMode: .fit)
             
-            Text(ripeningStages.title)
+            Text(ripeningStagess.title)
                 .font(.title)
                 .fontWeight(.bold)
             
-            Text(ripeningStages.description)
+            Text(ripeningStagess.description)
                 .font(.body)
                 .multilineTextAlignment(.center)
         }
@@ -33,7 +32,7 @@ struct RipenningStagesView: View {
 struct RipenningStagesView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView { // Added NavigationView for better preview
-            RipenningStagesView(ripeningStages: ripeningData[1])
+            RipenningStagesView(ripeningStagess: ripeningData[1])
         }
     }
 }
